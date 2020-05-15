@@ -3,7 +3,9 @@ const Erro = require('../config/fn')
 module.exports = {
     async create(req,res){
         try{
-        
+            return res.json({
+                user:req.userId
+            })
         }catch(err){
             console.log(err)
             Erro(err,'error')

@@ -1,8 +1,13 @@
 const { Router } = require('express');
 const autorRoutes = Router();
 
-const authorMiddleware = require('../middlewares/Author');
+const authMiddleware = require('../middleware/auth')
+const authorMiddleware = require('../controller/Author');
 
-autorRoutes.get('/author/all', authorMiddleware.index);
+autorRoutes.use(authMiddleware)
 
-module.exports = autorRoutes;
+autorRoutes.get('/all', authorMiddleware.index);
+
+const route = autorRoutes 
+
+module.exports = route.use('/author',autorRoutes)

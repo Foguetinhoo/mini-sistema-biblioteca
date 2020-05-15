@@ -1,11 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+const {encriptPass} = require('./controller/util/encrypt')
 
 const server = express();
 
 server.use(express.json());
 server.use(cors());
+server.use(express.urlencoded({extended:false}))
 server.use(morgan('dev'));
 server.use('/api/v1',require('./routes/routes'));
 

@@ -1,8 +1,10 @@
 const { Router } = require('express');
 const userRoutes = Router();
 
-const userMiddleware = require('../middlewares/User');
+const userMiddleware = require('../controller/User');
 
-userRoutes.post('/user/register', userMiddleware.create);
+userRoutes.post('/register', userMiddleware.create);
+userRoutes.post('/authenticate', userMiddleware.login);
 
-module.exports = userRoutes;
+const userRoute = userRoutes;
+module.exports = userRoute.use('/auth',userRoutes)
