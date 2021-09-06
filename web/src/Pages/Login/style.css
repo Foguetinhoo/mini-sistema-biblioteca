@@ -1,0 +1,113 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    background: #538fab;
+}
+.inputForm{
+    width: 300px;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    padding: 15px 10px;
+    border-radius: 5px;
+    color: #f3f1e5;
+}
+.inputForm input{
+    border: 0;
+    background: none;
+    user-select: none;
+    outline: none;
+    font-size: 18px;
+    margin-left: 10px;
+    color: #f3f1e5;;
+}
+.inputForm input::placeholder{
+    color:  #f3f1e5;
+    font-size: 18px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+}
+.eyeIcon{
+
+  margin-left: 10px;
+}
+.inputForm i{
+}
+.title{
+    font-family: 'Urbanist', sans-serif;
+    color:  #f3f1e5;
+    font-size: 40px;
+    text-align: right;
+    margin-bottom: 40px;
+}
+.title i{
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color:#f3f1e5;
+    position: relative;
+    left: 50%;
+}
+.iconButton{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.buttonSubmit:hover,.buttonSubmit:hover .iconButton{
+    transition:  all .6s ease;
+}
+.buttonSubmit:hover{
+    opacity: .9;
+}
+.buttonSubmit:hover .iconButton{
+    margin-right:  -20px;
+}
+.buttonSubmit:disabled{
+    cursor: not-allowed;
+    opacity: .5;
+    transition: none;
+}
+.buttonSubmit:disabled:hover{
+    transition: none;
+}
+.back{
+   display: flex;
+   justify-content: center;
+   background: #f3f1e5;
+}
+.backgroundImage{
+   
+}
+
+@media screen and (min-width:700px){
+    .page{
+        flex-direction: column;
+    }
+    .backgroundImage{
+        width: 80%;
+    }
+   
+    .form{
+        padding: 40px 20px;
+    }
+   
+}
+@media (max-width:780px) {
+    .inputForm{
+        width: 200px;
+    }
+    
+}
+@media screen and (min-width:800px){
+    .page{
+        flex-direction: row;
+    }
+}
