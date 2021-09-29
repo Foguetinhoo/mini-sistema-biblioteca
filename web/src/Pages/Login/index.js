@@ -6,8 +6,7 @@ import {faBookReader,faUser,faUnlockAlt,faArrowRight} from '@fortawesome/free-so
 import {faEye,faEyeSlash} from '@fortawesome/free-regular-svg-icons'
  import './style.css';
 import { Link } from 'react-router-dom';
-import { faAccusoft } from '@fortawesome/free-brands-svg-icons';
-import { icon } from '@fortawesome/fontawesome-svg-core';
+
 function Login() {
     const [user,setUser] = useState('')
     const [password,setPassword] = useState('')
@@ -75,7 +74,7 @@ function Login() {
             </form>
         </div>
         <div className="back">
-            <img className="backgroundImage" src={Back} alt="background"/>
+            <img className="backgroundImage" src={Back}  alt="background"/>
         </div>
     </div>;
 }
